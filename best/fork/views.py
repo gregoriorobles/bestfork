@@ -83,7 +83,7 @@ def compare(request):
     html = "<ol>\n"
     for item in sorted_by_scores:
         if item[0] == repo_url:
-		    html += '  <li><a style="white" href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
+		    html += '  <li><a style="color:white" href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
         else:
             html += '  <li><a href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
     html += "</ol>\n"
