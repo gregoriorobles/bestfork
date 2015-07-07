@@ -39,7 +39,7 @@ def compare(request):
     scores_dict = {}
 
     # Including the original, root repository in the list of forks to be analyzed
-    data.append({"owner": {"login": "root"}, "git_url": repo_url + ".git"})
+    data.append({"owner": {"login": "root"}, "git_url": repo_url + ".git", "html_url": repo_url})
     
 # , "created_at": "2010-10-03T00:06:01Z", "pushed_at": "2015-06-03T00:06:01Z"})    
 
