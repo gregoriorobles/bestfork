@@ -474,3 +474,8 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+input    {
+    color: black;
+}
+
