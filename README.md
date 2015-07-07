@@ -1,2 +1,0 @@
-# bestfork
-SATToSE Hackaton project
