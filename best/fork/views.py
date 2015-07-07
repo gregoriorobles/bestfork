@@ -70,7 +70,7 @@ def compare(request):
             if "Your code has been" in line:
                 score = line.split()[6][:-3]
                 print "Score", score
-                scores_dict[fork["git_url"]] = float(score)
+                scores_dict[fork["html_url"]] = float(score)
         input.close()
         os.system("rm -f pylint_output.txt")
         os.system("rm -rf tmp_repository")
@@ -82,7 +82,10 @@ def compare(request):
     sorted_by_scores = sorted_by_scores[::-1]
     html = "<ol>\n"
     for item in sorted_by_scores:
-        html += '  <li><a href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
+        if item[0] == repo_url:
+		    html += '  <li><a style="white" href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
+        else:
+            html += '  <li><a href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
     html += "</ol>\n"
 
     template = get_template("main.html")
