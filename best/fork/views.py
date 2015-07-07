@@ -82,7 +82,7 @@ def compare(request):
     sorted_by_scores = sorted_by_scores[::-1]
     html = "<ol>\n"
     for item in sorted_by_scores:
-        html += "  <li>" + str(item[0]) + " " + str(item[1]) + "</li>\n"
+        html += '  <li><a href="' + str(item[0]) + '">' + str(item[0]) + "</a>: <b>" + str(item[1]) + "</b></li>\n"
     html += "</ol>\n"
 
     template = get_template("main.html")
