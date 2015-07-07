@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.template.loader import get_template
+from django.template import Context
 import sys
 import urllib
 import json
@@ -83,4 +85,6 @@ def compare(request):
         html += "  <li>" + str(item[0]) + " " + str(item[1]) + "</li>\n"
     html += "</ol>\n"
 
-    return HttpResponse(html)
+    template = get_template("main.html")
+    rendered = template.render(Context({'results': html}))
+    return HttpResponse(rendered)
