@@ -81,10 +81,13 @@
                 <div id="repo_form">
 				  <form name="rep" action="http://cpu03.libresoft.es:8000" method="POST">
   				  <fieldset>
+  				  <h6>Introduce the URL of the GitHub repository you want to analyze for its best fork.</h6>
 			      <input type="text" name="name" id="repo" size="60" value="https://github.com/" class="text-input" autofocus />
-                <h6>This is at the moment a <b>prototype</b>: it works only with <b>Python</b> projects. The response time depends on the number of forks: <b>assume 20 seconds of delay per fork!</b></h6>
+			      
     		      <br>&nbsp;<br/>
     			  <input class="btn btn-primary btn-xl page-scroll" type="submit" name="submit" class="button" id="submit_btn" value="Find the best fork!" />
+    			  <br/>&nbsp;
+                  <h6>This site at the moment a <b>prototype</b>: it works only with <b>Python</b> projects.<br/>The response time depends on the number of forks: <b>assume 20 seconds of delay per fork!</b></h6>
   				  </fieldset>
 				  </form>
 				</div>
